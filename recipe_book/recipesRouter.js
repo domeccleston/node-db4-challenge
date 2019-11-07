@@ -26,4 +26,24 @@ recipesRouter.get("/:id/shoppinglist", (req, res) => {
     });
 });
 
+recipesRouter.get("/:id/instructions", (req, res) => {
+  Recipes.getInstructions(req.params.id)
+    .then(instructions => {
+      res.json(instructions);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+});
+
+recipesRouter.get("/ingredients/:id/recipes", (req, res) => {
+  Recipes.getRecipesByIngredient(req.params.id)
+    .then(recipes => {
+      res.json(recipes);
+    })
+    .catch(err => {
+      res.json(err);
+    })
+});
+
 module.exports = recipesRouter;
