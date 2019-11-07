@@ -1,0 +1,27 @@
+Recipe Book
+
+TABLE 1: RECIPES
+
+KEY | RECIPE NAME
+1   | chocolate cake
+2   | apple crumble
+3   | bagel
+
+TABLE 2: INGREDIENTS
+
+KEY | INGREDIENT NAME
+1   | flour
+2   | eggs
+3   | milk
+
+TABLE 3: RECIPE INGREDIENTS
+
+RECIPE KEY | INGREDIENT KEY | QUANTITY
+1          | 1              | 500g
+1          | 3              | 250ml
+
+// need an intemediary table for many-to-many
+
+TABLE 3: INSTRUCTIONS
+
+
